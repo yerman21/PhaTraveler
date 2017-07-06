@@ -1,14 +1,14 @@
 <div class="page-header">
     <h1>
-        Pagina de Alquiler
+        Pagina de Restaurante
     </h1>
     <p>
-        {{ link_to("home/", "Create carga") }}
+        <?= $this->tag->linkTo(['home/', 'Create carga']) ?>
     </p>
 </div>
 
 <script type="text/javascript">
-var json={{ datos }};
+var json=<?= $datos ?>;
    console.log(json);
 </script>
 
@@ -22,7 +22,7 @@ var json={{ datos }};
 
 <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-        {{ submit_button('Search', 'class': 'btn btn-default') }}
+        <?= $this->tag->submitButton(['Search', 'class' => 'btn btn-default']) ?>
     </div>
 </div>
 

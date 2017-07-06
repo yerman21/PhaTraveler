@@ -6,4 +6,7 @@ $router = $di->getRouter();
 $router->addGet("/home/busca/",array(
 	"controller"=>"Home",
 	"action"=>"busca",));
+$router->addGet("/home/restaurante/",array(
+	"controller"=>"Home",
+	"action"=>"restaurante",));
 $router->handle();

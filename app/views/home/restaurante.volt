@@ -1,6 +1,6 @@
 <div class="page-header">
     <h1>
-        Pagina de Alquiler
+        Pagina de Restaurante
     </h1>
     <p>
         {{ link_to("home/", "Create carga") }}
