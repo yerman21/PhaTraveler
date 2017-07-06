@@ -8,7 +8,8 @@
 </div>
 
 <script type="text/javascript">
-   console.log({{ datos.name }});
+var json={{ datos }};
+   console.log(json);
 </script>
 
 
