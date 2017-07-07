@@ -95,16 +95,16 @@
     <script type="text/javascript">  
         
         $("#home").on("click",function(event){
-            $("#contenido").load("/restaurante/index/home.volt");
+            $("#contenido").load("index/primero/");
         });
         $("#restaurante").on("click",function(event){
-            $("#contenido").load("restaurante/index/restaurante.volt");
+            $("#contenido").load("restaurante/index");
         });
         $("#alquila").on("click",function(event){
-            $("#contenido").load("/views/partes/alquila.volt");
+            $("#contenido").load("home/index");
         });
         $("#login").on("click",function(event){
-            $("#contenido").load("/views/partes/login.volt");
+            $("#contenido").load("login/index");
         });
   
   </script>

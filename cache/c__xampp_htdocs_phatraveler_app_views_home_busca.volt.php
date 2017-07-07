@@ -1,23 +1,39 @@
 <div class="page-header">
     <h1>
-        Search carga
+        Pagina de Alquiler
     </h1>
-    <p>
-        <?= $this->tag->linkTo(['home/', 'Create carga']) ?>
-    </p>
 </div>
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 var json=<?= $datos ?>;
-   console.log(json);
+var jsonResi=json.Residencia;
+var jsonCosas=json.Cosas;
+   console.log(jsonResi);
+   console.log(jsonCosas);
+
+lista(jsonResi);
+
+    function lista(tjson){
+        $.each(tjson,function(){
+            $.each(this,function(name,value){
+            console.log(name+" = "+value);
+              if(value instanceof String){
+                lista(value);
+              }
+            });
+        });
+    }
 </script>
 
-
-<div class="form-group">
-    <label for="fieldIdalumno" class="col-sm-2 control-label">Idalumno</label>
-    <div class="col-sm-10">
-      
-    </div>
+<div>
+    <table>
+        <thead>
+            <th>Restaurante</th>
+        </thead>
+        <tbody  id="content">
+            <tr><td></td></tr>
+        </tbody>
+    </table>
 </div>
 
 <div class="form-group">
